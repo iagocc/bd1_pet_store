@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="bg-slate-100 h-16 flex justify-center">
+    <div class="container mx-auto w-[960px] flex items-center justify-center">
+      <a href="/" class="mx-4">Início</a>
+      <a href="/pets" class="mx-4">Pets</a>
+      <a href="/owners" class="mx-4">Tutores</a>
+    </div>
+  </header>
+  <div class="container mx-auto py-6 w-[960px] flex">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>

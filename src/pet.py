@@ -1,4 +1,4 @@
-from owner import Owner
+from src.owner import Owner
 
 
 class Pet:

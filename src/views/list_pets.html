@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="container flex flex-col">
+  <h2 class="text-lg">Lista de pets</h2>
+  <div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+        <tr>
+          <th scope="col" class="px-6 py-3">
+            Nome
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Tipo
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Raça
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Nome do tutor
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for pet in pets %}
+        <tr class="bg-white border-b">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+            {{pet.name}}
+          </th>
+          <td class="px-6 py-4">
+            {{pet.type}}
+          </td>
+          <td class="px-6 py-4">
+            {{pet.breed}}
+          </td>
+          <td class="px-6 py-4">
+            {{pet.owner.name}}
+          </td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
